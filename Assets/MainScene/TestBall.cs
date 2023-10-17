@@ -24,7 +24,8 @@ public class TestBall : MonoBehaviour
             other.gameObject.GetComponent<TestBall>().collisionDestory = false;
             Debug.Log("Red");
             Destroy(other.gameObject);
-            GameObject go = Instantiate(_biggerBallPrefab);  
+            Destroy(this.gameObject);
+            GameObject go = Instantiate(_biggerBallPrefab, this.transform.position, Quaternion.identity);
         }
 
     }

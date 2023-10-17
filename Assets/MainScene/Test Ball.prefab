@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7300323111792792733}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.34, y: 2.05, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -137,3 +137,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _biggerBallPrefab: {fileID: 4016402997109167320, guid: 3fccbee878b19486b94623d2e2c5533d, type: 3}
+  collisionDestory: 1
