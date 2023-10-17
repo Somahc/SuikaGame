@@ -277,6 +277,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb7d37753a4ef47b4ae49c1e18ec65c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _redBallPrefab: {fileID: 7300323111792792733, guid: bb4ae32d72b6443c99c42c597ded1761, type: 3}
+  _blueBallPrefab: {fileID: 4016402997109167320, guid: 3fccbee878b19486b94623d2e2c5533d, type: 3}
+  _greenBallPrefab: {fileID: 626107408694573112, guid: f36659685ed4348e6b6ad575b44f6705, type: 3}
 --- !u!1001 &305957941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -417,6 +420,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &720951395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 720951397}
+  - component: {fileID: 720951396}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &720951396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720951395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc2357a710acd4841beba6ea7d3a8781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBallTouch: 0
+--- !u!4 &720951397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720951395}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.2993853, y: -0.26853362, z: -0.05667263}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &835995411
 GameObject:

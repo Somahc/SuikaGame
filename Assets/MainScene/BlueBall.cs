@@ -20,6 +20,8 @@ public class BlueBall : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D other) {
+        GManager.instance.isBallTouch = true;
+
         if(other.gameObject.tag == "Blue" && collisionDestory){
             other.gameObject.GetComponent<BlueBall>().collisionDestory = false;
             Debug.Log("Blue");

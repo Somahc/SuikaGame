@@ -20,6 +20,8 @@ public class RedBall : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D other) {
+        GManager.instance.isBallTouch = true;
+
         if(other.gameObject.tag == "Red" && collisionDestory){
             other.gameObject.GetComponent<RedBall>().collisionDestory = false;
             Debug.Log("Red");
@@ -27,6 +29,5 @@ public class RedBall : MonoBehaviour
             Destroy(this.gameObject);
             GameObject go = Instantiate(_biggerBallPrefab, this.transform.position, Quaternion.identity);
         }
-
     }
 }
