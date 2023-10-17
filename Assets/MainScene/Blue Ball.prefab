@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3262868772081266681}
   - component: {fileID: 6318671055678164776}
   - component: {fileID: -1904921698662571056}
+  - component: {fileID: -6483229728363572545}
   m_Layer: 0
-  m_Name: Ao Ball
-  m_TagString: Untagged
+  m_Name: Blue Ball
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,3 +124,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-6483229728363572545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4016402997109167320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c37066ba68804f6bbec6839367900f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _biggerBallPrefab: {fileID: 626107408694573112, guid: f36659685ed4348e6b6ad575b44f6705, type: 3}
+  collisionDestory: 1

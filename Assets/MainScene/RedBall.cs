@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestBall : MonoBehaviour
+public class RedBall : MonoBehaviour
 {
     [SerializeField] GameObject _biggerBallPrefab;
     public bool collisionDestory = true;
@@ -21,7 +21,7 @@ public class TestBall : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.tag == "Red" && collisionDestory){
-            other.gameObject.GetComponent<TestBall>().collisionDestory = false;
+            other.gameObject.GetComponent<RedBall>().collisionDestory = false;
             Debug.Log("Red");
             Destroy(other.gameObject);
             Destroy(this.gameObject);
