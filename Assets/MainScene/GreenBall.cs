@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RedBall : MonoBehaviour
+public class GreenBall : MonoBehaviour
 {
-    [SerializeField] GameObject _biggerBallPrefab;
+    // [SerializeField] GameObject _biggerBallPrefab;
     public bool collisionDestory = true;
     GameObject player;
 
@@ -25,12 +25,13 @@ public class RedBall : MonoBehaviour
             player.GetComponent<Player>().LoadNextBall();
         }
 
-        if(other.gameObject.tag == "Red" && collisionDestory){
-            other.gameObject.GetComponent<RedBall>().collisionDestory = false;
-            Debug.Log("Red");
-            Destroy(other.gameObject);
-            Destroy(this.gameObject);
-            GameObject go = Instantiate(_biggerBallPrefab, this.transform.position, Quaternion.identity);
-        }
+        // if(other.gameObject.tag == "Blue" && collisionDestory){
+        //     other.gameObject.GetComponent<BlueBall>().collisionDestory = false;
+        //     Debug.Log("Blue");
+        //     Destroy(other.gameObject);
+        //     Destroy(this.gameObject);
+        //     GameObject go = Instantiate(_biggerBallPrefab, this.transform.position, Quaternion.identity);
+        // }
+
     }
 }

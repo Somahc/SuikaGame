@@ -6,11 +6,12 @@ public class BlueBall : MonoBehaviour
 {
     [SerializeField] GameObject _biggerBallPrefab;
     public bool collisionDestory = true;
+    GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
@@ -20,7 +21,9 @@ public class BlueBall : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D other) {
-        GManager.instance.isBallTouch = true;
+        if(!GManager.instance.isHaveBall) {
+            player.GetComponent<Player>().LoadNextBall();
+        }
 
         if(other.gameObject.tag == "Blue" && collisionDestory){
             other.gameObject.GetComponent<BlueBall>().collisionDestory = false;

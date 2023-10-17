@@ -5,8 +5,10 @@ using UnityEngine;
 public class GManager : MonoBehaviour
 {
 
+    public int[] ballList = new int[2];
     public static GManager instance = null;
-    public bool isBallTouch = false; // 投下したボールが何かしらに触れたかどうか
+    public bool isHaveBall = true; // ボールをプレイヤーが持っているかどうか
+
     private void Awake(){
     if(instance == null)
     {
@@ -17,20 +19,20 @@ public class GManager : MonoBehaviour
     {
          Destroy(this.gameObject);
     }
+    ballList[0] = Random.Range(0, 3);
+    ballList[1] = Random.Range(0, 3);
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(isBallTouch){
-            // Debug.Log("isBallTouch");
 
-            isBallTouch = false;
-        }
     }
+
+    
 }
