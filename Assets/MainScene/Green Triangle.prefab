@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 626107408694573115}
   - component: {fileID: 626107408694573116}
   - component: {fileID: 626107408694573117}
+  - component: {fileID: 7565892209997059244}
   m_Layer: 0
   m_Name: Green Triangle
   m_TagString: Green
@@ -135,3 +136,16 @@ PolygonCollider2D:
     - - {x: 0, y: 0.5773587}
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
+--- !u!114 &7565892209997059244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626107408694573112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fa3229baf2a74ae7a97fbc77ac5f685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionDestory: 1
