@@ -5,7 +5,7 @@ using UnityEngine;
 public class BlueBall : MonoBehaviour
 {
     [SerializeField] GameObject _biggerBallPrefab;
-    public bool collisionDestory = true;
+    public bool collisionDestory = true; // これ入れることで、一回の衝突で複数のオブジェクトが消えないようにする
     GameObject player;
 
     // Start is called before the first frame update

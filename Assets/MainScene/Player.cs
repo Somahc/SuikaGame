@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -9,11 +10,15 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject _greenBallPrefab;
     private float speed = 0.009f;
     GameObject currentBall;
+    GameObject nextManager;
     Rigidbody2D rb2d;
+    public Text nextText;
 
     // Start is called before the first frame update
     void Start()
     {
+        UpdateNextText();
+        nextManager = GameObject.Find("NextManager");
         Vector3 spawnPosition = transform.position + new Vector3(0, -1.25f, 0);
         int rnd = GManager.instance.ballList[0];
         if(rnd == 0){
@@ -35,13 +40,13 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow)) {
             position.x -= speed;
             transform.position = position;
-            if(GManager.instance.isHaveBall) currentBall.transform.position = transform.position + new Vector3(0, -1.25f, 0);
+            if(GManager.instance.isHaveBall && currentBall != null) currentBall.transform.position = transform.position + new Vector3(0, -1.25f, 0);
         }
         // 右に移動
         if (Input.GetKey(KeyCode.RightArrow)) {
             position.x += speed;
             transform.position = position;
-            if(GManager.instance.isHaveBall) currentBall.transform.position = transform.position + new Vector3(0, -1.25f, 0);
+            if(GManager.instance.isHaveBall && currentBall != null) currentBall.transform.position = transform.position + new Vector3(0, -1.25f, 0);
         }
         if(Input.GetKeyDown(KeyCode.Space) && GManager.instance.isHaveBall){
             DropBall();
@@ -58,8 +63,10 @@ public class Player : MonoBehaviour
     }
 
     public void LoadNextBall(){
+        Debug.Log("LoadNextBall");
         GManager.instance.ballList[0] = GManager.instance.ballList[1];
         GManager.instance.ballList[1] = Random.Range(0, 3);
+        UpdateNextText();
         GManager.instance.isHaveBall = true;
         Vector3 spawnPosition = transform.position + new Vector3(0, -1.25f, 0);
         int rnd = GManager.instance.ballList[0];
@@ -72,5 +79,11 @@ public class Player : MonoBehaviour
         }
         rb2d = currentBall.GetComponent<Rigidbody2D>();
         rb2d.isKinematic = true;
+    }
+
+    private void UpdateNextText(){
+        if(GManager.instance.ballList[1] == 0) nextText.text = "Next: Red";
+        else if(GManager.instance.ballList[1] == 1) nextText.text = "Next: Blue";
+        else if(GManager.instance.ballList[1] == 2) nextText.text = "Next: Green";
     }
 }
