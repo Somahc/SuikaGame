@@ -26,7 +26,7 @@ public class MaxBar : MonoBehaviour
         if (isTouching)
         {
             touchDuration += Time.deltaTime;
-            if (touchDuration >= 2f && !isGameOver) // 1秒以上接触していたら
+            if (touchDuration >= 1.5f && !isGameOver) // 1.5秒以上接触していたら
             {
                 // ゲームオーバーモーダルを表示する処理を呼び出す
                 ShowGameOverModal();

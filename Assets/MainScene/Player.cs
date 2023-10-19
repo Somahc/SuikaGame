@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject _redBallPrefab;
     [SerializeField] GameObject _blueBallPrefab;
     [SerializeField] GameObject _greenBallPrefab;
-    private float speed = 0.009f;
+    private float speed = 0.03f;
     private bool isWaitEnough = false;
     GameObject currentBall;
     GameObject nextManager;
