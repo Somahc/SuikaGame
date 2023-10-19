@@ -42,6 +42,11 @@ public class GManager : MonoBehaviour
     }
 
     public void UpdateScore(int plusScore){
+        if(scoreText == null) {
+            scoreText = GameObject.Find("/InGameUI/Score").GetComponent<Text>();
+            scoreTextGameover = GameObject.Find("/GameoverModal/ScoreText").GetComponent<Text>();
+            score = 0;
+        }
         this.score += plusScore;
         scoreText.text = "Score: " + this.score;
         scoreTextGameover.text = "Score: " + this.score;
