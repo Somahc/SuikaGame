@@ -26,6 +26,8 @@ public class GreenBall : MonoBehaviour
             player.GetComponent<Player>().LoadNextBall();
         }
 
+        // GManager.instance.UpdateScore(6);
+
         // if(other.gameObject.tag == "Blue" && collisionDestory){
         //     other.gameObject.GetComponent<BlueBall>().collisionDestory = false;
         //     Debug.Log("Blue");

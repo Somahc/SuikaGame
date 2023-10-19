@@ -31,6 +31,8 @@ public class BlueBall : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(this.gameObject);
             GameObject go = Instantiate(_biggerBallPrefab, this.transform.position, Quaternion.identity);
+
+            GManager.instance.UpdateScore(3);
         }
 
     }
